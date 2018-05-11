@@ -431,7 +431,7 @@ class CassandraProvider:
                 elif isinstance(value, OrderedMapSerializedKey):
                     dict_values = {}
                     for i in value:
-                        if isinstance(values[i], (str, unicode)):
+                        if isinstance(value[i], (str, unicode)):
                           dict_values[str(i)] = value[i].encode('utf8');
                         else:
                           dict_values[str(i)] = str(value[i])
