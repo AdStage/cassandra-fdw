@@ -434,7 +434,7 @@ class CassandraProvider:
                         if isinstance(value[i], (str, unicode)):
                           dict_values[str(i)] = value[i].encode('utf8');
                         else:
-                          dict_values[str(i)] = str(value[i])
+                          dict_values[str(i)] = value[i]
                     line[column_name] = json.dumps(dict_values)
                 else:
                     line[column_name] = value
